@@ -44,7 +44,7 @@ all: TimePlanner
 TimePlanner: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -Xlinker /usr/local/lib/libgtest.a -Xlinker /usr/local/lib/libgtest_main.a -o "TimePlanner" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "TimePlanner" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
