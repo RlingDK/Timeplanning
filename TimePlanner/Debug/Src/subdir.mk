@@ -4,22 +4,28 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../Src/Main.cpp \
 ../Src/Period.cpp \
 ../Src/Plan.cpp \
+../Src/Player.cpp \
 ../Src/TestPlan.cpp \
-../Src/Tracker.cpp 
+../Src/Timer.cpp 
 
 OBJS += \
+./Src/Main.o \
 ./Src/Period.o \
 ./Src/Plan.o \
+./Src/Player.o \
 ./Src/TestPlan.o \
-./Src/Tracker.o 
+./Src/Timer.o 
 
 CPP_DEPS += \
+./Src/Main.d \
 ./Src/Period.d \
 ./Src/Plan.d \
+./Src/Player.d \
 ./Src/TestPlan.d \
-./Src/Tracker.d 
+./Src/Timer.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

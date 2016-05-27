@@ -7,12 +7,13 @@
 
 #include "Period.h"
 
-Period::Period() {
-	// TODO Auto-generated constructor stub
+Period::Period() {}
 
+Period::Period(int len, TYPE typ, int snd) {
+	if(!setLength(len)) setLength(minLength);	// Force length to minimum length
+	setType(typ);
+	setSound(snd);
 }
 
-Period::~Period() {
-	// TODO Auto-generated destructor stub
-}
+Period::~Period() {}
 
