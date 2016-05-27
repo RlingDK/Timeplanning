@@ -9,6 +9,7 @@
 #define PLAYER_H_
 
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * This class plays a sound

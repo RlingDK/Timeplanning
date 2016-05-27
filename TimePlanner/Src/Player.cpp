@@ -19,4 +19,5 @@ Player::~Player() {}
  */
 void Player::play(int sound) {
 	printf("- Playing sound no. %i\n", sound);
+	sleep(2);
 }

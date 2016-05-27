@@ -10,6 +10,8 @@
 
 #include "Period.h"
 #include "Player.h"
+#include <stdio.h>
+#include <unistd.h>
 
 /**
  * Handles a single time period.
@@ -17,6 +19,10 @@
  */
 class Timer {
 	Player player;
+
+	/** Method to update and display period data) */
+	void showPeriod(const Period& period);
+
 public:
 	Timer();
 	virtual ~Timer();

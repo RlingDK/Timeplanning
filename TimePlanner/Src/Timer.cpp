@@ -7,17 +7,26 @@
 
 #include "Timer.h"
 
-#include <stdio.h>
-
 Timer::Timer() {}
 
 Timer::~Timer() {}
 
+/** Update the shown data on screen */
+void Timer::showPeriod(const Period& period) {
+	printf("Running type no. %i.\n", period.getType()); // Just prints to the screen for now
+}
+
 /**
- * Doing a simple test, where the periods never fails
+ * Handles each time period
+ * 1) Show period data
+ * 2) Play period sound
+ * 3) Wait for period to complete or fail
  */
 bool Timer::runPeriod(Period period) {
+	showPeriod(period);
 	player.play(period.getSound());
-	printf("Running type no. %i.\n", period.getType());
+	int time = period.getLength();
+	time /= 60;		// To reduce simulation time
+	sleep(time);
 	return true;
 }
