@@ -95,7 +95,7 @@ Period Plan::nextPeriod(bool OldPeriodCompleted) {
 		// Throw a trying to run the plan too early (plan not ready)
 	}
 	if(OldPeriodCompleted) {	// Last time period completed, failure forgotten and on to the next period
-		if(timeUsed()) return list.back(); // Use the time is all used go to the end
+		if(timeUsed()) return list.back(); // All the time is used! Go to the failed end
 		twiceInRow = false;
 		return list.at(++curPos); // Go to next period
 	} else {					// Time period failed.
